@@ -245,7 +245,7 @@ Failure / Error	Low tone
 
 User presses:
 
-# → Lock mode
+#. # → Lock mode
 
 * → Unlock mode
 
