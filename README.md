@@ -20,7 +20,7 @@ Buzzer-based acoustic feedback
 
 The OTP is generated on the ESP32, sent to the backend, emailed to the user, and verified through keypad entry before executing servo lock/unlock actions.
 
-🚀 System Architecture
+# 🚀 System Architecture
 User → ESP32 Keypad → Generate OTP
         ↓
 Send OTP → FastAPI Backend → MongoDB
