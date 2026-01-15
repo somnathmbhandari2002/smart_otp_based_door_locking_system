@@ -11,7 +11,7 @@ load_dotenv()
 
 app = FastAPI(title="Smart Door OTP System")
 
-# Add CORS middleware - THIS IS CRITICAL FOR ARDUINO CONNECTION
+# Add CORS middleware - THIS IS CRITICAL FOR ARDUINO CONNECTION----
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Allows all origins
@@ -20,7 +20,7 @@ app.add_middleware(
     allow_headers=["*"],   # Allows all headers
 )
 
-# Email config from .env
+# Email config from .env----
 conf = ConnectionConfig(
     MAIL_USERNAME=os.getenv("MAIL_USERNAME"),
     MAIL_PASSWORD=os.getenv("MAIL_PASSWORD"),
@@ -33,7 +33,7 @@ conf = ConnectionConfig(
     VALIDATE_CERTS=True
 )
 
-# MongoDB connection
+# MongoDB connection----
 mongo_client = MongoClient(os.getenv("MONGO_URL", "mongodb://localhost:27017"))
 db = mongo_client["smart_door"]
 otp_collection = db["otp"]
