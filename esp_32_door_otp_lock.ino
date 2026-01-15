@@ -6,12 +6,12 @@
 #include <ESP32Servo.h>
 #include <ArduinoJson.h>
 
-// -------- CONFIG --------
+// -------- CONFIG -----------
 const char* WIFI_SSID = "somnath";  
 const char* WIFI_PASS = "098765431"; 
 String BASE_URL = "http://10.243.62.199:8000";
 
-// -------- Keypad pins --------
+// -------- Keypad pins -----------
 const int rowPins[4] = {14, 27, 26, 25};
 const int colPins[4] = {33, 32, 18, 19};
 const char keysMap[4][4] = {
